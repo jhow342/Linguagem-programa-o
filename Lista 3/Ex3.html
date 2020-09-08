@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício condição </title>
+        <script>
+            function calcular(){
+                let f1 = 0 //qtd de faixa 1
+                let f2 = 0 //qtd de faixa 2
+                let f3 = 0 //qtd de faixa 3
+                let f4 = 0 //qtd de faixa 4
+                let f5 = 0 //qtd de faixa 5
+                let idade
+                let contador = 1
+                while (contador <= 8) {
+                    idade = Number(prompt(`informe a idade`))
+                    if (idade <= 15){
+                        f1++
+                    }
+                    else if (idade <= 30){
+                        f2++
+                    }
+                    else if (idade <= 45){
+                        f3++
+                    }
+                    else if (idade <= 60){
+                        f4++
+                    }
+                    else {
+                        f5++
+                    }
+                    contador++
+                }     
+                console.log(`faixa 1 ${f1} faixa 2 ${f2} faixa 3 ${f3} faixa 4 ${f4} faixa 5 ${f5}`)
+                console.log(`% da faixa 1 ${f1/8*100} % da faixa 5 ${f5/8*100}`)
+        </script>
+    </head>
+    <body>
+        <h1> Exercício condição </h1>
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="Resultado" >
+        </h3>
+    </body>
+</html>
