@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+        
+        <head>
+            <meta charset="utf-8"> 
+            <title> Exercício 5 </title>
+            <script>
+                function calcular(){
+                  var N1 = Number(document.getElementById("N1").value)
+                  var N2 = Number(document.getElementById("N2").value)
+                  var opcao = Number(document.getElementById("opcao").value)
+                  var resultado
+                  switch(opcao){
+                     case 1: resultado = (N1 + N2) / 2
+                        break
+                     case 2: if (N1 > N2){
+                        resultado = N1 - N2                    
+                     }
+                     else {
+                        resultado = N2 - N2
+                     }
+                        break
+                     case 3: resultado = N1 * N2
+                        break
+                     case 4: if (N2 !=0){ 
+                        resultado = N1 / N2
+                     }
+                     else {
+                        resultado = "Não é possivel divisão por zero"
+                     }
+                         break
+                     default:
+                     resultado = "Opção invalida"
+                  }
+             document.getElementById("resultado").innerHTML = resultado
+                }
+        
+         </script>
+   </head>
+   <body>
+      <h2> Exercício 5
+      <h3> 
+           Informe um primeiro numero
+            <input type= "number" id = "N1"> 
+      </h3>
+      <h3>
+         Informe um segundo numero
+         <input type= "number" id = "N2">
+      </h3>
+      <h3>
+         Escolha uma opção 1. Média 2. Subtração 3. Produto 4. Divisão
+          <input type="number" id="opcao"/>
+      </h3>
+      <h3>
+      
+         <button type="button" onClick="calcular()"> Calcular botão </button> 
+     </h3>
+      <h3 id="resultado">
+      </h3>
+   </body>
+</html>

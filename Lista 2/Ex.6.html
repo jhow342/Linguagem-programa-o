@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+        
+        <head>
+            <meta charset="utf-8"> 
+            <title> Exercício 6 </title>
+            <script>
+                function calcular(){
+                  var N1 = Number(document.getElementById("N1").value)
+                  var N2 = Number(document.getElementById("N2").value)
+                  var opcao = Number(document.getElementById("opcao").value)
+                  var resultado
+                  var resultado2
+                  switch(opcao){
+                     case 1: resultado = (N1 ** N2)
+                             resultado2 = (" ")   
+                        break
+                     case 2: resultado = Math.sqrt(N1)
+                             resultado2 = Math.sqrt(N2) 
+                        break
+                     case 3: resultado = Math.cbrt(N1)
+                             resultado2 = Math.cbrt(N2) 
+                        break
+                     default:
+                     resultado = "Opção invalida"
+                  }
+             document.getElementById("resultado").innerHTML = resultado               
+             document.getElementById("resultado2").innerHTML = resultado2
+                }
+                
+        
+         </script>
+   </head>
+   <body>
+      <h2> Exercício 6
+      <h3> 
+           Informe um primeiro numero
+            <input type= "number" id = "N1"> 
+      </h3>
+      <h3>
+         Informe um segundo numero
+         <input type= "number" id = "N2">
+      </h3>
+      <h3>
+         Escolha uma opção abaixo:
+         <ol>
+            <li>Primeiro numero elevado ao segundo</li>
+            <li>Raiz quadrada de cada um dos numeros</li>
+            <li>Raiz cubica de cada um dos numeros</li>
+         </ol>
+      <h3>
+         <select id= "opcao">
+            <option value="1"> 1</option>
+            <option value="2"> 2</option>
+            <option value="3"> 3</option>
+         </select>
+      </h3>
+
+      </h3>
+      <h3>
+      
+         <button type="button" onClick="calcular()"> Calcular botão </button> 
+     </h3>
+      <h3 id="resultado">
+      </h3>
+      <h3 id="resultado2">
+      </h3>
+   </body>
+</html>

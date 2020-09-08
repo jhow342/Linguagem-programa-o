@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício 10 </title>
+        <script>
+            function calcular(){
+                var N1 =  Number(document.getElementById("N1").value)              
+                     var resultado
+                     if (N1 <= 11999) {
+                       resultado = N1 + (N1 * 0.05)
+                     }
+                     else if ((N1 >= 12000)&&(N1 <= 25000)) {
+                        resultado = N1 + (N1 * 0.10 ) + (N1 * 0.15)
+                     }
+                     else {
+                         resultado = N1 + (N1 * 0.15 ) + (N1 * 0.20)
+                     }
+                     document.getElementById("resultado").innerHTML = `O custo do carro para o consumidor é R$: ${resultado}`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício 10 </h1>
+        <h3> 
+            Insira o custo de fábrica do carro (utilize ponto e não vírgula) 
+            <input type="number" id="N1">
+        </h3>
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="resultado" >
+
+
+        </h3>
+    </body>
+</html>

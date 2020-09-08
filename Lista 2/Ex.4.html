@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício 4 </title>
+        <script>
+            function calcular(){
+                var N1 =  Number(document.getElementById("N1").value)
+                var N2 = Number(document.getElementById("N2").value)
+                var N3 = Number(document.getElementById("N3").value)                
+                     var resultado
+                     if ((N1 >= N2) && (N1 >= N3)){
+                       resultado = N1
+                     }
+                     else if ((N2 >= N3)&&(N2 >= N1)) {
+                       resultado = N2   
+                     }
+                     else {
+                     resultado = N3
+                     }
+                     document.getElementById("resultado").innerHTML = `O maior numero é: ${resultado}`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício 4 </h1>
+        <h3> 
+            Digite um numero (utilize ponto e não vírgula) 
+            <input type="number" id="N1">
+        </h3>
+        <h3> 
+            Digite outro numero (utilize ponto e não vírgula) 
+            <input type="number" id="N2">
+        </h3>
+        <h3> 
+            Digite outro numero (utilize ponto e não vírgula) 
+            <input type="number" id="N3">
+        </h3>
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="resultado" >
+
+
+        </h3>
+    </body>
+</html>

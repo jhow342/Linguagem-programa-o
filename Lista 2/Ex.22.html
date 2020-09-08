@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício 22 </title>
+        <style type = "text/css">
+        /* quando definimos um estilo para um elemento, todos os filhos são afetados */
+        body{ 
+          text-align: center;
+        }
+        h3 {color: blue
+        }
+        h1 {color: red
+        }
+
+        </style>
+        <script>
+            function calcular(){
+                let N1 = Number(document.getElementById("N1").value)
+                let N2 = Number(document.getElementById("N2").value)
+                     let resultado
+                     if ((N1 < 20)&&(N2 < 60)){
+                       resultado = `9`
+                     }
+                     else if ((N1 < 20) && (N2 > 60) && (N2 <= 90)){
+                       resultado = `8`
+                     }
+                     else if ((N1 < 20)&&(N2 > 90)){
+                       resultado = `7`
+                     }
+                     else if ((N1 > 20)&&(N1 < 50)&&(N2 < 60)){
+                       resultado = `6`
+                     }
+                     else if ((N1 > 20)&&(N1 < 50)&&(N2 > 60) && (N2 <= 90) ){
+                       resultado = `5`
+                     }
+                     else if ((N1 > 20)&&(N1 < 50)&& (N2 > 90) ){
+                       resultado = `4`
+                     }
+                     else if ((N1 < 50)&& (N2 < 60) ){
+                       resultado = `3`
+                     }
+                     else if ((N1 < 50)&&(N2 > 60)&&(N2 < 90) ){
+                       resultado = `2`
+                     }
+                     else {
+                     resultado = `1`
+                     }
+                     document.getElementById("resultado").innerHTML = `O risco é de grau: ${resultado}`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício 22 </h1>
+        <h3> 
+            Informe a Idade
+            <input type="number" id="N1">
+        </h3>
+        <h3> 
+            Informe o peso em quilos (utilize ponto e não vírgula) 
+            <input type="number" id="N2">
+        </h3>
+
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="resultado" >
+
+
+        </h3>
+    </body>
+</html>

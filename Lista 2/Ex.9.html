@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício 9 </title>
+        <script>
+            function calcular(){
+                var N1 =  Number(document.getElementById("N1").value)              
+                     var resultado
+                     if (N1 > 400) {
+                       resultado = N1 + (N1 * 0.3)
+                     }
+                     else if ((N1 <= 399)&&(N1 >= 300)) {
+                        resultado = N1 + (N1 * 0.25)
+                     }
+                     else if ((N1 <= 299)&&(N1 >= 200)) {
+                        resultado = N1 + (N1 * 0.2)
+                     }
+                     else {
+                     resultado = N1 + (N1 * 0.1)
+                     }
+                     document.getElementById("resultado").innerHTML = `O maior numero é: ${resultado}`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício 9 </h1>
+        <h3> 
+            Insira o saldo médio do último ano (utilize ponto e não vírgula) 
+            <input type="number" id="N1">
+        </h3>
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="resultado" >
+
+
+        </h3>
+    </body>
+</html>

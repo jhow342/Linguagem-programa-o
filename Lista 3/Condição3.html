@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício condição </title>
+        <script>
+            function calcular(){
+                let contador = 1
+                let soma = 0
+                let Contad = Number(prompt("informe o numero de vezes"))
+                while (contador <= Contad) {
+                    let numero = Number(prompt("informe um numero"))
+                    soma = soma + numero
+                    contador++
+                }
+                document.getElementById("Resultado").innerHTML = `Média = ${soma/Contad}`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício condição </h1>
+        <h3> 
+            Clique no botão para começar.
+        </h3>
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="Resultado" >
+        </h3>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício 23 </title>
+        <script>
+            function calcular(){
+                let N1 = Number(document.getElementById("N1").value)
+                let N2 = Number(document.getElementById("N2").value)
+                     let Preco
+                     if ((N1 < 1) && (N1 > 10)){
+                        Preco = (10 * N2)
+                     }
+                     else if ((N1 < 11) && (N1 >20 )){
+                        Preco = (15 * N2)
+                     }
+                     else if ((N1 < 21) && (N1 >30 )){
+                        Preco = (20 * N2)
+                     }
+                     else {
+                        Preco = (30 * N2)
+                     }
+                     document.getElementById("Preco").innerHTML = `O Preço dos produtos é R$: ${Preco.toFixed(2)}.`
+
+                     let Desconto
+                     if (Preco < 250){
+                     Desconto = Preco - (Preco * 0.05)
+                     }
+                     else if ((Preco < 11) && (Preco > 20)){
+                     Desconto = Preco - (Preco * 0.10)
+                     }
+                     else {
+                     Desconto = Preco - (Preco * 0.15)
+                     }
+                     document.getElementById("Desconto").innerHTML = `O Preço final dos produtos com desconto é R$: ${Desconto.toFixed(2)}.`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício 23 </h1>
+        <h3> 
+            Informe o código do produto. (utilize ponto e não vírgula).
+            <input type="number" id="N1">
+        </h3>
+        <h3> 
+            Informe a quantidade de produtos. (utilize ponto e não vírgula).
+            <input type="number" id="N2">
+        </h3>
+
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="Preco" >
+        </h3>
+        <h3 id="Desconto" >
+        </h3>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!-- comentario em HTML-->
+
+<!DOCTYPE html> <!-- indentificar para o navegador que é um documento html versão 5-->
+<html> <!--elemnto raiz do html-->
+        
+        <head><!--cabeçalho da pagina-->
+            <meta charset="utf-8">  <!-- o idioma é portugues e portanto precisa e suporta acento e cecidilha-->   
+            <title> Peso </title> <!--titulo da pagina-->
+            <script>
+                function calcular(){
+                  // recuperar o valor do N1 informado pelo usuario na caixa de texto
+                  var N1 = document.getElementById("N1").value
+                  // calcular o novo peso
+                  var peso = N1*1000
+                  // mostra o resultado do calculo
+                  // template string facilita a junção do texto com o conteudo de variavel
+                  // atenção: usamos crase neste caso
+                  // como o resultado estará dentro fo h3 precisamos ultilizar o atributo InnerHTML
+                  document.getElementById("peso").innerHTML = `O novo peso em gramas: ${peso}`
+
+           }
+         </script>
+   </head>
+   <body>
+      <h1> Calcular peso </h1> <!--cabeçalho de nivel-->
+      <h3> 
+           Informe o peso em quilos
+            <input type= "number" id = "N1"> <!--caixa de entrada do primeiro numero-->
+      </h3>
+      <h3>
+         <button type="button" onClick="calcular()"> Calcular botão </button> 
+         <!--botão pra calcular-->
+      </h3>
+      <h3 id="peso">
+      </h3>
+   </body>
+     </html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+        <script type="text/javascript">
+         var gearPage = document.getElementById('GearPage');
+         if(null != gearPage)
+         {
+             gearPage.parentNode.removeChild(gearPage);
+             document.title = "Erro";
+         }
+     

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Exercício 8 </title>
+        <script>
+            function calcular(){
+                var N1 =  Number(document.getElementById("N1").value)               
+                     var resultado
+                     if (N1 <= 299){
+                       resultado = N1 + N1 * 0.35
+                     }
+                     else {
+                     resultado = N1 + N1 * 0.15
+                     }
+                     document.getElementById("resultado").innerHTML = `Seu Salário será: ${resultado}`
+            }     
+        </script>
+    </head>
+    <body>
+        <h1> Exercício 8 </h1>
+        <h3> 
+            Digite o salário base (utilize ponto e não vírgula) 
+            <input type="number" id="N1">
+        </h3>
+        <h3>
+            <button type="button" onClick="calcular()"> Calcular botão </button> 
+        </h3>
+        <h3 id="resultado" >
+        </h3>
+    </body>
+</html>
